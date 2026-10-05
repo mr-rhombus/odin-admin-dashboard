@@ -7,7 +7,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .sidebar {
@@ -61,7 +61,7 @@ body {
   grid-row: 1 / 2;
   display: grid;
   grid-template-rows: 2fr 3fr;
-  margin: 0 2% 0 5%;
+  margin: 0 20px 0 40px;
   box-shadow: 200px black;
 }
 
@@ -145,7 +145,7 @@ body {
     border: none;
     border-radius: 40px;
     padding: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   button:hover {
     background-color: rgb(44, 109, 162);
@@ -156,13 +156,17 @@ body {
   display: flex;
   height: 100%;
   align-items: flex-end;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .content {
   display: grid;
   grid-template-columns: 5fr 2fr;
-  height: calc(5 / 6 * 100vh - 20px);
   padding: 0 20px 20px 20px;
+  background-color: rgb(227, 232, 239);
+  height: calc(5 / 6 * 100vh - 20px);
+  overflow-y: auto;
 }
 
 .projects {
@@ -184,14 +188,97 @@ body {
 }
 
 .project-card {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  gap: 3px;
   background-color: white;
   border-radius: 8px;
   border-left: 8px solid rgb(231, 182, 74);
+  padding: 20px;
+}
+
+.project-card img {
+  height: 25px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card-content {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #808080;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
 .side-card {
   background-color: white;
   border-radius: 8px;
+}
+
+#announcements {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.announcement {
+  padding: 0 5px;
+}
+
+.announcement-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.announcement-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #808080;
+}
+
+#announcements hr {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-sm {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.profile-sm-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-username-sm {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.profile-tagline-sm {
+  font-size: 0.9rem;
+  color: #808080;
 }
 
 .card-shadow {
@@ -204,6 +291,7 @@ body {
   border-radius: 40px;
   border: 0.5px solid black;
   background-color: #f2f0ef;
+  overflow: hidden;
 }
 
 .profile-round-lg {
@@ -232,8 +320,4 @@ body {
 
 .pointer {
   cursor: pointer;
-}
-
-.content {
-  background-color: rgb(227, 232, 239);
 }
